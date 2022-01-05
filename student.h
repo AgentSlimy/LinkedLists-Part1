@@ -6,7 +6,8 @@ using namespace std;
 class Student {
 public:
   Student();
-  ~Student();
+  ~Student(); //Destructor
+  //Getters
   char* getFirstName();
   char* getLastName();
   int* getID();
