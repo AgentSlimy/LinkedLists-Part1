@@ -1,3 +1,7 @@
+//Author: Nathan Zou
+//Date: 1/13/22
+//First part of linked lists, with help from Stefan Ene
+
 #include <iostream>
 #include <cstring>
 #include <iomanip>
@@ -52,7 +56,28 @@ int main() {
 
   cout << "----------------------------" << endl;
 
-  
+  //Print Student 1
+  cout << "Student 1: " << student->getFirstName() << " " << student->getLastName() << ", ";
+  cout << "ID: " << *student->getID() << ", GPA: ";
+  cout << fixed << setprecision(2) << *student->getGPA() << endl;
+
+  //Print Student 2
+  cout << "Student 2: " << student2->getFirstName() << " " << student->getLastName() << ", ";
+  cout << "ID: " << *student->getID() << ", GPA: ";
+  cout << fixed << setprecision(2) << *student->getGPA() << endl;
+
+  cout << "----------------------------" << endl;
+
+  //Node test 
+  Node* firstNode = new Node(student);
+  Node* secNode = new Node(student2);
+  firstNode->setStudent(student);
+  firstNode->setNext(secNode);
+  secNode->(student2);
+  //Print nodes
+  cout << "Nodes: " << endl;
+  cout << firstNode->getStudent()->getFirstName() << " " << firstNode->getStudent()->getLastName() << endl;
+  cout << firstNode->getNext()->getStudent()->getFirstName() << " " << firstNode->getNext()->getStudent()->getLastName() << endl;
   
   return 0;
 }
