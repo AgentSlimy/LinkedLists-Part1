@@ -62,9 +62,9 @@ int main() {
   cout << fixed << setprecision(2) << *student->getGPA() << endl;
 
   //Print Student 2
-  cout << "Student 2: " << student2->getFirstName() << " " << student->getLastName() << ", ";
-  cout << "ID: " << *student->getID() << ", GPA: ";
-  cout << fixed << setprecision(2) << *student->getGPA() << endl;
+  cout << "Student 2: " << student2->getFirstName() << " " << student2->getLastName() << ", ";
+  cout << "ID: " << *student2->getID() << ", GPA: ";
+  cout << fixed << setprecision(2) << *student2->getGPA() << endl;
 
   cout << "----------------------------" << endl;
 
@@ -73,7 +73,7 @@ int main() {
   Node* secNode = new Node(student2);
   firstNode->setStudent(student);
   firstNode->setNext(secNode);
-  secNode->(student2);
+  secNode->setStudent(student2);
   //Print nodes
   cout << "Nodes: " << endl;
   cout << firstNode->getStudent()->getFirstName() << " " << firstNode->getStudent()->getLastName() << endl;
